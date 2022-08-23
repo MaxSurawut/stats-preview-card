@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0a0c1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lexend Deca', sans-serif;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1112px;
+}
+.info-card{
+    background-color: #1c1938;
+   padding: 4.5rem;
+   border-radius: 10px 0 0 10px;
+}
+.info-card h1{
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+.info-card h1 span{
+    color: #ae52db;
+}
+.info-card p{
+    margin-top: 2rem;
+    color: #adabc0;
+    line-height: 1.7;
+    
+}
+.img-card{
+    background-color: #1c1938; 
+    position: relative;
+}
+.img-card::before{
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #A858DA;
+    opacity: .6;
+    border-radius: 0 10px 10px 0;
+}
+.img-card img{
+    border-radius: 0 10px 10px 0;
+}
+.stats-company{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.stats-company p{
+    margin-top: 4rem;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 700;
+}
+.stats-company p span{
+    color: #adabc0;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+@media only screen and (max-width: 480px){
+    body{
+        height: 85vh;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 750px;
+    }
+    .info-card{
+        order: 2;
+        border-radius: 0 0 15px 15px;
+        text-align: center;
+        width: 380px;
+        margin: 0 auto;
+        padding: 2.5rem;
+    }
+    .img-card{
+        order: 1;
+        width: 380px;
+        margin: 0 auto;
+    }
+    .img-card img{
+        border-radius: 15px 15px 0 0;
+    }
+    .img-card::before{
+        height:100%;
+        border-radius: 15px 15px 0 0;
+    }
+    .stats-company{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .stats-company p{
+        margin-top: 2rem;
+    }
+
+}
